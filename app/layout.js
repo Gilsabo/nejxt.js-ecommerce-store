@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <h1>Sarah Kirchweger</h1>
-        <p>Graphig designer</p>
+        <p>Graphic designer</p>
         <nav>
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
