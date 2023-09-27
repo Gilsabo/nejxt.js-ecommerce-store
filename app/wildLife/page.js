@@ -24,6 +24,7 @@ export default function WildLife() {
                   src={`/images/${animal.name}.jpg`}
                   width={200}
                   height={300}
+                  alt={animal.name}
                 />
               </Link>
             </div>
