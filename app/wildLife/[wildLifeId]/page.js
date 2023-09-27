@@ -6,7 +6,7 @@ export function generateMetadata({ params }) {
   const singleAnimal = getWildLifeAnimal(Number(params.wildLifeId));
 
   return {
-    title: singleAnimal ? singleAnimal.firstName : '',
+    title: singleAnimal ? singleAnimal.name : '',
   };
 }
 
