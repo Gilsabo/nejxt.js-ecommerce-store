@@ -1,6 +1,6 @@
 'server-only';
 
-const wildLife = [
+const wildLifeAnimals = [
   {
     id: 1,
     name: 'bear',
@@ -66,10 +66,10 @@ const wildLife = [
   },
 ];
 
-export function getWildLife() {
-  return wildLife;
+export function getWildLifeAnimals() {
+  return wildLifeAnimals;
 }
 
-export function getSingleWildLifeAnimal(id) {
-  return wildLife.find((animal) => animal.id === id);
+export function getWildLifeAnimal(id) {
+  return wildLifeAnimals.find((animal) => animal.id === id);
 }
