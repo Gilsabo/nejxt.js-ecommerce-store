@@ -33,16 +33,13 @@ export default function WildLifeAnimal(props) {
         />
       </div>
       <div>
-        <div data-test-id="product-price">{wildLifeAnimalFromObject.name}</div>
+        <div>{wildLifeAnimalFromObject.name}</div>
         <div data-test-id="product-price">
-          small size : {wildLifeAnimalFromObject.size[0].small}
+          {wildLifeAnimalFromObject.price} euros
         </div>
-        <div data-test-id="product-price">
-          medium size :{wildLifeAnimalFromObject.size[0].medium}
-        </div>
-        <div data-test-id="product-price">
-          large size : {wildLifeAnimalFromObject.size[0].large}
-        </div>
+        <div>small size : {wildLifeAnimalFromObject.size[0].small}</div>
+        <div>medium size :{wildLifeAnimalFromObject.size[0].medium}</div>
+        <div>large size : {wildLifeAnimalFromObject.size[0].large}</div>
       </div>
     </div>
   );
