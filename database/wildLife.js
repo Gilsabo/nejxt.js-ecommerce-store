@@ -6,6 +6,7 @@ const wildLifeAnimals = [
     name: 'bear',
     type: 'wildLife',
     price: 60,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -13,6 +14,7 @@ const wildLifeAnimals = [
     name: 'cow-seated',
     type: 'wildLife',
     price: 80,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -20,6 +22,7 @@ const wildLifeAnimals = [
     name: 'deer',
     type: 'wildLife',
     price: 90,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -27,6 +30,7 @@ const wildLifeAnimals = [
     name: 'flamingo',
     type: 'wildLife',
     price: 50,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -34,6 +38,7 @@ const wildLifeAnimals = [
     name: 'goat',
     type: 'wildLife',
     price: 40,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -41,6 +46,7 @@ const wildLifeAnimals = [
     name: 'monkey',
     type: 'wildLife',
     price: 35,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -48,6 +54,7 @@ const wildLifeAnimals = [
     name: 'tiger',
     type: 'wildLife',
     price: 25,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -55,6 +62,7 @@ const wildLifeAnimals = [
     name: 'wash-bear',
     type: 'wildLife',
     price: 35,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
   {
@@ -62,6 +70,7 @@ const wildLifeAnimals = [
     name: 'zebra',
     type: 'wildLife',
     price: 60,
+    quantity: 0,
     size: [{ small: '25 x 25', medium: '50 x 50', large: '50 x 100' }],
   },
 ];
