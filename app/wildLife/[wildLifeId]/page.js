@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getWildLifeAnimal } from '../../../database/wildLife';
+import ChangeQuantityButton from '../ChangeQuantityButton';
 
 export function generateMetadata({ params }) {
   const singleAnimal = getWildLifeAnimal(Number(params.wildLifeId));
@@ -14,8 +15,6 @@ export default function WildLifeAnimal(props) {
   const wildLifeAnimalFromObject = getWildLifeAnimal(
     Number(props.params.wildLifeId),
   );
-  console.log(wildLifeAnimalFromObject);
-  console.log(props);
 
   if (!wildLifeAnimalFromObject) {
     return notFound();
@@ -32,7 +31,7 @@ export default function WildLifeAnimal(props) {
           alt={wildLifeAnimalFromObject.name}
         />
       </div>
-      <button data-test-id="product-add-to-cart">Add</button>
+      <ChangeQuantityButton />
       <div>
         <div>{wildLifeAnimalFromObject.name}</div>
         <div data-test-id="product-price">
