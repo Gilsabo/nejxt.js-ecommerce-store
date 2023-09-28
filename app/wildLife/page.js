@@ -16,17 +16,20 @@ export default function WildLife() {
         {wildLifeAnimals.map((animal) => {
           return (
             <div key={`animal-div-${animal.id}`}>
-              <Link
-                data-test-id={`product-${animal.id}`}
-                href={`/wildLife/${animal.id}`}
-              >
-                <Image
-                  src={`/images/${animal.name}.jpg`}
-                  width={200}
-                  height={300}
-                  alt={animal.name}
-                />
-              </Link>
+              <Image
+                src={`/images/${animal.name}.jpg`}
+                width={200}
+                height={300}
+                alt={animal.name}
+              />
+              <div>
+                <Link
+                  data-test-id={`product-${animal.id}`}
+                  href={`/wildLife/${animal.id}`}
+                >
+                  {animal.name}
+                </Link>
+              </div>
             </div>
           );
         })}
