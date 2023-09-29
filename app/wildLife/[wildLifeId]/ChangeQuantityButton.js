@@ -1,21 +1,22 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { changeQuantityButtonFunction } from './actions';
 
-export default function ChangeQuantityButton() {
+export default function ChangeQuantityButton(props) {
   const router = useRouter();
-  const [count, setCount] = useState(1);
-
+  const [quantity, setQuantity] = useState(1);
+  console.log('props', props);
   return (
     <form>
       <button
         type="button"
         data-test-id="product-add-to-cart"
         onClick={() => {
-          if (count === 0) {
+          if (quantity === 0) {
             return;
           }
-          setCount(count - 1);
+          setQuantity(quantity - 1);
           router.refresh();
         }}
       >
@@ -23,23 +24,30 @@ export default function ChangeQuantityButton() {
       </button>
       <input
         type="number"
-        value={count}
+        value={quantity}
         onChange={(e) => {
-          setCount(e.currentTarget.value);
+          setQuantity(e.currentTarget.value);
         }}
       />
       <button
         type="button"
         data-test-id="product-add-to-cart"
         onClick={() => {
-          setCount(count + 1);
+          setQuantity(quantity + 1);
+
           router.refresh();
         }}
       >
         +
       </button>
-      <button>Add</button>
-      <div>{count}</div>
+      <button
+        formAction={async () =>
+          await changeQuantityButtonFunction(props.wildLife, quantity)
+        }
+      >
+        Add
+      </button>
+      <div>{quantity}</div>
     </form>
   );
 }
