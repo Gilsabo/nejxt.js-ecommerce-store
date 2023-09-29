@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getWildLifeAnimal } from '../../../database/wildLife';
-import ChangeQuantityButton from '../ChangeQuantityButton';
+import { getCookie } from '../../../util/cookies';
+import { parseJson } from '../../../util/json';
+import ChangeQuantityButton from './ChangeQuantityButton';
 
 export function generateMetadata({ params }) {
   const singleAnimal = getWildLifeAnimal(Number(params.wildLifeId));
-
+  console.log(singleAnimal);
   return {
     title: singleAnimal ? singleAnimal.name : '',
   };
@@ -19,6 +21,15 @@ export default function WildLifeAnimal(props) {
   if (!wildLifeAnimalFromObject) {
     return notFound();
   }
+
+  const wildLifeCookie = getCookie('wildLifePaintings');
+
+  const wildLifeQuantities = !wildLifeCookie ? [] : parseJson(wildLifeCookie);
+
+  const wildLifeToDisplay = wildLifeQuantities.find((wildLifeQuantity) => {
+    return wildLifeQuantity.id === wildLifeAnimalFromObject.id;
+  });
+
   return (
     <div>
       <div>
@@ -31,7 +42,7 @@ export default function WildLifeAnimal(props) {
           alt={wildLifeAnimalFromObject.name}
         />
       </div>
-      <ChangeQuantityButton />
+      <ChangeQuantityButton wildLife={wildLifeAnimalFromObject.id} />
       <div>
         <div>{wildLifeAnimalFromObject.name}</div>
         <div data-test-id="product-price">
