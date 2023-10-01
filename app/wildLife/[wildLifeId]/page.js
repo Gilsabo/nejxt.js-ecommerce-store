@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getWildLifeAnimal } from '../../../database/wildLife';
-import { getCookie } from '../../../util/cookies';
-import { parseJson } from '../../../util/json';
+// import { getCookie } from '../../../util/cookies';
+// import { parseJson } from '../../../util/json';
 import ChangeQuantityButton from './ChangeQuantityButton';
 
 export function generateMetadata({ params }) {
@@ -22,13 +22,14 @@ export default function WildLifeAnimal(props) {
     return notFound();
   }
 
-  const wildLifeCookie = getCookie('wildLifePaintings');
+  // I DO NOT KNOW IF I NEED THIS CODE. WITHOUT IT WORKS FINE UNTIL NOW
+  // const wildLifeCookie = getCookie('wildLifePaintings');
 
-  const wildLifeQuantities = !wildLifeCookie ? [] : parseJson(wildLifeCookie);
+  // const wildLifeQuantities = !wildLifeCookie ? [] : parseJson(wildLifeCookie);
 
-  const wildLifeToDisplay = wildLifeQuantities.find((wildLifeQuantity) => {
-    return wildLifeQuantity.id === wildLifeAnimalFromObject.id;
-  });
+  // const wildLifeToDisplay = wildLifeQuantities.find((wildLifeQuantity) => {
+  // return wildLifeQuantity.id === wildLifeAnimalFromObject.id;
+  // });
 
   return (
     <div>
