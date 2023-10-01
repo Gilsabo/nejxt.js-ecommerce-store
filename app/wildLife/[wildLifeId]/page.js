@@ -43,7 +43,7 @@ export default function WildLifeAnimal(props) {
           alt={wildLifeAnimalFromObject.name}
         />
       </div>
-      <ChangeQuantityButton wildLife={wildLifeAnimalFromObject.id} />
+      <ChangeQuantityButton wildLifeId={wildLifeAnimalFromObject.id} />
       <div>
         <div>{wildLifeAnimalFromObject.name}</div>
         <div data-test-id="product-price">
