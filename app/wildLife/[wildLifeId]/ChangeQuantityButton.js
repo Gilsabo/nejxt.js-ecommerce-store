@@ -47,6 +47,7 @@ export default function ChangeQuantityButton(props) {
       >
         Add
       </button>
+
       <div>{quantity}</div>
     </form>
   );
