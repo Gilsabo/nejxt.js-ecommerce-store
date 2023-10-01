@@ -39,6 +39,14 @@ export default function Cart() {
               width={350}
               height={400}
             />
+            <div className="quanityt">
+              Quantity: {wildLifeWithQuantity.quantity}
+            </div>
+            <div>{wildLifeWithQuantity.price}</div>
+            <div className="subtotal">
+              subtotal:
+              {wildLifeWithQuantity.quantity * wildLifeWithQuantity.price}
+            </div>
           </div>
         );
       })}
