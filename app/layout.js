@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
           <Link href="/landscapes">Landscapes</Link>
           <Link href="/pets">Pets</Link>
           <Link href="/wildLife">Wild life</Link>
+          <Link href="/cart">Shopping cart</Link>
         </nav>
         {children}
       </body>
