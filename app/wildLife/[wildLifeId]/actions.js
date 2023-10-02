@@ -25,7 +25,7 @@ export async function changeQuantityButtonFunction(wildLifeId, quantity) {
   // Case B: cookie is defined and fruit id already exists!
   // if we are in fruit id = 1
   if (wildLifeQuantityToUpdate) {
-    wildLifeQuantityToUpdate.quantity = quantity;
+    wildLifeQuantityToUpdate.quantity += quantity;
   } else {
     // Case C: cookie is defined and fruit id doesn't exist!
     wildLifeQuantities.push({
