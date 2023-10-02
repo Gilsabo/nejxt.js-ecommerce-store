@@ -24,6 +24,7 @@ export default function ChangeQuantityButton(props) {
         -
       </button>
       <input
+        data-test-id="product-quantity"
         type="number"
         value={quantity}
         onChange={(e) => {
@@ -42,6 +43,7 @@ export default function ChangeQuantityButton(props) {
         +
       </button>
       <button
+        data-test-id="product-add-to-cart"
         formAction={
           async () =>
             await changeQuantityButtonFunction(props.wildLifeId, quantity) // props.wildLife is the id taken from
