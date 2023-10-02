@@ -60,7 +60,9 @@ export default function Cart() {
               wildLifeWithQuantityId={wildLifeWithQuantity.id}
             />
             <div data-test-id="cart-total">Total price : {}</div>
-            <button data-test-id="cart-checkout">Check out button</button>
+            <button data-test-id="cart-checkout">
+              <a href="/checkout"> Check out button</a>
+            </button>
           </div>
         );
       })}
