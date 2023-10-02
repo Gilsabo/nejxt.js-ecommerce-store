@@ -34,7 +34,10 @@ export default function Cart() {
       <div>Cart</div>
       {wildLifeWithQuantities.map((wildLifeWithQuantity) => {
         return (
-          <div key={`div-${wildLifeWithQuantity}`}>
+          <div
+            key={`div-${wildLifeWithQuantity}`}
+            data-test-id={`cart-product-${wildLifeWithQuantity}`}
+          >
             <div>{wildLifeWithQuantity.name}</div>
             <Image
               src={`/images/${wildLifeWithQuantity.name}.jpg`}
@@ -42,7 +45,10 @@ export default function Cart() {
               width={350}
               height={400}
             />
-            <div className="quanityt">
+            <div
+              className="quanityt"
+              data-test-id={`cart-product-quantity-${wildLifeWithQuantity.id}`}
+            >
               Quantity: {wildLifeWithQuantity.quantity}
             </div>
             <div>{wildLifeWithQuantity.price}</div>
@@ -53,6 +59,8 @@ export default function Cart() {
             <RemoveWildLifeButton
               wildLifeWithQuantityId={wildLifeWithQuantity.id}
             />
+            <div data-test-id="cart-total">Total price : {}</div>
+            <button data-test-id="cart-checkout">Check out button</button>
           </div>
         );
       })}
