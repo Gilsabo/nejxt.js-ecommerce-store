@@ -7,6 +7,7 @@ export default function ChangeQuantityButton(props) {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   console.log('props', props);
+  console.log(props.wildLife);
   return (
     <form>
       <button
@@ -41,8 +42,9 @@ export default function ChangeQuantityButton(props) {
         +
       </button>
       <button
-        formAction={async () =>
-          await changeQuantityButtonFunction(props.wildLife, quantity)
+        formAction={
+          async () =>
+            await changeQuantityButtonFunction(props.wildLifeId, quantity) // props.wildLife is the id taken from
         }
       >
         Add
