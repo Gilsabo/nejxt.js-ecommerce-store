@@ -7,6 +7,7 @@ export default function RemoveWildLifeButton(props) {
   const [count, setCount] = useState(0);
   return (
     <button
+      data-test-id={`cart-product-remove-${props.wildLifeWithQuantityId}`}
       onClick={async () => {
         console.log('1');
         setCount(count + 1);
