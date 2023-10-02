@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getWildLifeAnimals } from '../../database/wildLife';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
+import RemoveWildLifeButton from './RemoveWildLifeButton';
 
 export default function Cart() {
   const wildLifeCookie = getCookie('wildLifePaintings');
@@ -9,6 +10,7 @@ export default function Cart() {
   const wildLifeAnimals = getWildLifeAnimals();
 
   const wildLifeQuantities = !wildLifeCookie ? [] : parseJson(wildLifeCookie);
+  console.log(wildLifeQuantities);
 
   console.log('wildLifequantitieees', wildLifeQuantities);
 
@@ -26,6 +28,7 @@ export default function Cart() {
       (wildLifeWithQuantity) => wildLifeWithQuantity.quantity !== undefined,
     );
   console.log('asdfasdfasfddasfa', wildLifeWithQuantities);
+
   return (
     <>
       <div>Cart</div>
@@ -47,6 +50,9 @@ export default function Cart() {
               subtotal:
               {wildLifeWithQuantity.quantity * wildLifeWithQuantity.price}
             </div>
+            <RemoveWildLifeButton
+              wildLifeWithQuantityId={wildLifeWithQuantity.id}
+            />
           </div>
         );
       })}
