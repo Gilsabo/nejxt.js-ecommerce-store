@@ -16,6 +16,7 @@ export default function Cart() {
   console.log('wildLifequantitieees', wildLifeQuantities);
 
   const wildLifeWithQuantities = wildLifeAnimals
+
     .map((wildLifeAnimal) => {
       const matchingWithQuantityFromCookie = wildLifeQuantities.find(
         (wildLifeQuantity) => wildLifeAnimal.id === wildLifeQuantity.id,
@@ -71,7 +72,11 @@ export default function Cart() {
           </div>
         );
       })}
-      <div data-test-id="cart-total">Total price :{totalPrice}</div>
+      {totalPrice ? (
+        <div data-test-id="cart-total">Total price :{totalPrice}</div>
+      ) : (
+        <div>No painting in the shopping cart</div>
+      )}
     </>
   );
 }
