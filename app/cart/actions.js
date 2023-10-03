@@ -6,7 +6,7 @@ import { parseJson } from '../../util/json';
 export default async function RemoveButtonFunction(wildLifeWithQuantityId) {
   // 1. get the current cookie
 
-  const wildLifeCookie = getCookie('wildLifePaintings');
+  const wildLifeCookie = getCookie('cart');
   console.log('id', wildLifeWithQuantityId);
   console.log('cookie', wildLifeCookie);
 
@@ -24,8 +24,5 @@ export default async function RemoveButtonFunction(wildLifeWithQuantityId) {
 
   console.log('stays', wildLifeItemsRemoved);
 
-  await cookies().set(
-    'wildLifePaintings',
-    JSON.stringify(wildLifeItemsRemoved),
-  );
+  await cookies().set('cart', JSON.stringify(wildLifeItemsRemoved));
 }

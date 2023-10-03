@@ -5,7 +5,7 @@ import { parseJson } from '../../../util/json';
 
 export async function changeQuantityButtonFunction(wildLifeId, quantity) {
   // 1. get the current cookie
-  const wildLifeQuantityCookie = getCookie('wildLifePaintings');
+  const wildLifeQuantityCookie = getCookie('cart');
   // 2. parse the cookie value
 
   // !fruitsCommentsCookie <=> fruitsCommentsCookie === undefined
@@ -35,5 +35,5 @@ export async function changeQuantityButtonFunction(wildLifeId, quantity) {
   }
 
   // 4. we override the cookie
-  await cookies().set('wildLifePaintings', JSON.stringify(wildLifeQuantities));
+  await cookies().set('cart', JSON.stringify(wildLifeQuantities));
 }

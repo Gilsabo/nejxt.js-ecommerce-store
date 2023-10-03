@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default function Cart() {
-  const wildLifeCookie = getCookie('wildLifePaintings');
+  const wildLifeCookie = getCookie('cart');
   console.log('wildlifecookie', wildLifeCookie);
   const wildLifeAnimals = getWildLifeAnimals();
 
