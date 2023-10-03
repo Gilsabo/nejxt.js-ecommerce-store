@@ -1,9 +1,8 @@
-'use client';
-import Link from 'next/link';
+import ClearButton from './ClearButton';
 
 export default function Form() {
   return (
-    <fom>
+    <form>
       <label type="text">
         First name <input data-test-id="checkout-first-name" required />
       </label>
@@ -37,9 +36,7 @@ export default function Form() {
       <label type="number">
         Security code <input data-test-id="checkout-security-code" required />
       </label>
-      <button data-test-id="checkout-confirm-order">
-        <Link href="/thankyou">Confirm order</Link>
-      </button>
-    </fom>
+      <ClearButton />
+    </form>
   );
 }
