@@ -5,6 +5,10 @@ import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import RemoveWildLifeButton from './RemoveWildLifeButton';
 
+export const metadata = {
+  title: 'Shopping cart',
+};
+
 export default function Cart() {
   const wildLifeCookie = getCookie('wildLifePaintings');
   console.log('wildlifecookie', wildLifeCookie);
