@@ -60,13 +60,18 @@ export default function Cart() {
             <RemoveWildLifeButton
               wildLifeWithQuantityId={wildLifeWithQuantity.id}
             />
-            <div data-test-id="cart-total">Total price : {}</div>
             <button data-test-id="cart-checkout">
               <Link href="/checkout"> Check out button</Link>
             </button>
           </div>
         );
       })}
+      <div data-test-id="cart-total">
+        Total price :
+        {wildLifeWithQuantities.reduce((accumulator, currentValue) => {
+          return accumulator + currentValue.quantity * currentValue.price;
+        }, 0)}
+      </div>
     </>
   );
 }
