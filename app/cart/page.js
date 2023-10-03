@@ -29,7 +29,12 @@ export default function Cart() {
       (wildLifeWithQuantity) => wildLifeWithQuantity.quantity !== undefined,
     );
   console.log('asdfasdfasfddasfa', wildLifeWithQuantities);
-
+  const totalPrice = wildLifeWithQuantities.reduce(
+    (accumulator, currentValue) => {
+      return accumulator + currentValue.quantity * currentValue.price;
+    },
+    0,
+  );
   return (
     <>
       <div>Cart</div>
@@ -66,12 +71,7 @@ export default function Cart() {
           </div>
         );
       })}
-      <div data-test-id="cart-total">
-        Total price :
-        {wildLifeWithQuantities.reduce((accumulator, currentValue) => {
-          return accumulator + currentValue.quantity * currentValue.price;
-        }, 0)}
-      </div>
+      <div data-test-id="cart-total">Total price :{totalPrice}</div>
     </>
   );
 }
