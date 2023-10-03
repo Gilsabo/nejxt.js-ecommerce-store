@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Form() {
   return (
@@ -36,7 +37,9 @@ export default function Form() {
       <label type="number">
         Security code <input data-test-id="checkout-security-code" required />
       </label>
-      <button data-test-id="checkout-confirm-order">Confirm order </button>
+      <button data-test-id="checkout-confirm-order">
+        <Link href="/thankyou">Confirm order</Link>
+      </button>
     </fom>
   );
 }
