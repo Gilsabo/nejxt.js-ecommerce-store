@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { getWildLifeAnimals } from '../../database/wildLife';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
@@ -61,7 +62,7 @@ export default function Cart() {
             />
             <div data-test-id="cart-total">Total price : {}</div>
             <button data-test-id="cart-checkout">
-              <a href="/checkout"> Check out button</a>
+              <Link href="/checkout"> Check out button</Link>
             </button>
           </div>
         );
