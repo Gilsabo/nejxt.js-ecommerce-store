@@ -28,14 +28,14 @@ export default function ChangeQuantityButton(props) {
         type="number"
         value={quantity}
         onChange={(e) => {
-          setQuantity(e.currentTarget.value);
+          setQuantity(Number(e.currentTarget.value));
         }}
       />
       <button
         type="button"
         data-test-id="product-add-to-cart"
         onClick={() => {
-          setQuantity(quantity + 1);
+          setQuantity(Number(quantity + 1));
 
           router.refresh();
         }}
