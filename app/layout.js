@@ -1,6 +1,8 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import { getCookie } from '../util/cookies';
+import { parseJson } from '../util/json';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,6 +15,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const cartCookie = getCookie('cart');
+  const cart = parseJson(cartCookie);
+  console.log('cartcookie layout', cart);
+
+  const numberOfItems = cart.reduce((accumulator, preValue) => {
+    return accumulator + preValue.quantity;
+  }, 0);
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -29,7 +39,7 @@ export default function RootLayout({ children }) {
           <Link href="/wildLife">Wild life</Link>
           <Link href="/cart">Shopping cart</Link>
           <header data-test-id="cart-link">
-            Items<span data-test-id="cart-count">{}</span>
+            Items<span data-test-id="cart-count">{numberOfItems}</span>
           </header>
         </nav>
         {children}
