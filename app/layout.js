@@ -28,6 +28,9 @@ export default function RootLayout({ children }) {
           <Link href="/pets">Pets</Link>
           <Link href="/wildLife">Wild life</Link>
           <Link href="/cart">Shopping cart</Link>
+          <header data-test-id="cart-link">
+            Items<span data-test-id="cart-count">{}</span>
+          </header>
         </nav>
         {children}
       </body>
