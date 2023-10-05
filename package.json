@@ -10,7 +10,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "ley": "^0.8.1",
     "next": "latest",
+    "postgres": "^3.3.5",
     "react": "latest",
     "react-dom": "latest",
     "sass": "^1.68.0",
