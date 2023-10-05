@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   const cart = parseJson(cartCookie);
   console.log('cartcookie layout', cart);
 
-  const numberOfItems = cart.reduce((accumulator, preValue) => {
+  const numberOfItems = cart?.reduce((accumulator, preValue) => {
     return accumulator + preValue.quantity;
   }, 0);
 
@@ -40,7 +40,10 @@ export default function RootLayout({ children }) {
           <Link href="/cart">Shopping cart</Link>
           <header data-test-id="cart-link">
             <Link data-test-id="cart-link" href="/cart">
-              Items<span data-test-id="cart-count">{numberOfItems}</span>
+              Items:{' '}
+              {numberOfItems ?? (
+                <span data-test-id="cart-count">{numberOfItems}</span>
+              )}
             </Link>
           </header>
         </nav>
