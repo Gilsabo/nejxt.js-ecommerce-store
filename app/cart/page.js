@@ -9,10 +9,10 @@ export const metadata = {
   title: 'Shopping cart',
 };
 
-export default function Cart() {
+export default async function Cart() {
   const wildLifeCookie = getCookie('cart');
   console.log('wildlifecookie', wildLifeCookie);
-  const wildLifeAnimals = getWildLifeAnimals();
+  const wildLifeAnimals = await getWildLifeAnimals();
 
   const wildLifeQuantities = !wildLifeCookie ? [] : parseJson(wildLifeCookie);
   console.log(wildLifeQuantities);
