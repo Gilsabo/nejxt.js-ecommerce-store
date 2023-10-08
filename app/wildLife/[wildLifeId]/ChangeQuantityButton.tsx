@@ -3,11 +3,15 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { changeQuantityButtonFunction } from './actions';
 
-export default function ChangeQuantityButton(props) {
+type Props = {
+  wildLifeId: number;
+};
+
+export default function ChangeQuantityButton(props: Props) {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   console.log('props', props);
-  console.log(props.wildLife);
+
   return (
     <form>
       <button
