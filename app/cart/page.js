@@ -33,7 +33,7 @@ export default async function Cart() {
     .filter(
       (wildLifeWithQuantity) => wildLifeWithQuantity.quantity !== undefined,
     );
-  console.log('asdfasdfasfddasfa', wildLifeWithQuantities);
+
   const totalPrice = wildLifeWithQuantities.reduce(
     (accumulator, currentValue) => {
       return accumulator + currentValue.quantity * currentValue.price;
