@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getWildLifeAnimals } from '../../database/wildLife';
+import { WildLifeAnimals } from '../../migrations/00000-createTableWildLife';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import RemoveWildLifeButton from './RemoveWildLifeButton';
@@ -23,7 +24,8 @@ export default async function Cart() {
 
     .map((wildLifeAnimal) => {
       const matchingWithQuantityFromCookie = wildLifeQuantities.find(
-        (wildLifeQuantity) => wildLifeAnimal.id === wildLifeQuantity.id,
+        (wildLifeQuantity: WildLifeAnimals) =>
+          wildLifeAnimal.id === wildLifeQuantity.id,
       );
       return {
         ...wildLifeAnimal,
