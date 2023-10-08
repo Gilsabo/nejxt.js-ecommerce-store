@@ -3,7 +3,11 @@
 import { useState } from 'react';
 import RemoveButtonFunction from './actions';
 
-export default function RemoveWildLifeButton(props) {
+type Props = {
+  wildLifeWithQuantityId: number;
+};
+
+export default function RemoveWildLifeButton(props: Props) {
   const [count, setCount] = useState(0);
   return (
     <button
