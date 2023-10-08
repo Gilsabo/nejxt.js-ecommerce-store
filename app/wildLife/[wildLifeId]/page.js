@@ -13,8 +13,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function WildLifeAnimal(props) {
-  const wildLifeAnimalFromObject = getWildLifeAnimal(
+export default async function WildLifeAnimal(props) {
+  const wildLifeAnimalFromObject = await getWildLifeAnimal(
     Number(props.params.wildLifeId),
   );
 
@@ -31,6 +31,14 @@ export default function WildLifeAnimal(props) {
   // return wildLifeQuantity.id === wildLifeAnimalFromObject.id;
   // });
 
+  const sizesArray = JSON.parse(wildLifeAnimalFromObject.size);
+  const firstSizeObject = sizesArray[0];
+  const smallSize = firstSizeObject.small;
+  const mediumSize = firstSizeObject.medium;
+  const largeSize = firstSizeObject.large;
+
+  console.log('wildlife', wildLifeAnimalFromObject);
+  console.log('size', wildLifeAnimalFromObject.size[0]);
   return (
     <div>
       <div>
@@ -49,9 +57,9 @@ export default function WildLifeAnimal(props) {
         <div data-test-id="product-price">
           {wildLifeAnimalFromObject.price} euros
         </div>
-        <div>small size : {wildLifeAnimalFromObject.size[0].small}</div>
-        <div>medium size :{wildLifeAnimalFromObject.size[0].medium}</div>
-        <div>large size : {wildLifeAnimalFromObject.size[0].large}</div>
+        <div>small size : {smallSize}</div>
+        <div>medium size :{mediumSize}</div>
+        <div>large size : {largeSize}</div>
       </div>
     </div>
   );
