@@ -42,6 +42,10 @@ export default async function Cart() {
     },
     0,
   );
+
+  const subTotal = (quantity: number, price: number) => {
+    return quantity * price;
+  };
   return (
     <>
       <div>Cart</div>
@@ -67,7 +71,10 @@ export default async function Cart() {
             <div>{wildLifeWithQuantity.price}</div>
             <div className="subtotal">
               subtotal:
-              {wildLifeWithQuantity.quantity * wildLifeWithQuantity.price}
+              {subTotal(
+                wildLifeWithQuantity.quantity,
+                wildLifeWithQuantity.price,
+              )}
             </div>
             <RemoveWildLifeButton
               wildLifeWithQuantityId={wildLifeWithQuantity.id}
