@@ -26,27 +26,31 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1>Sarah Kirchweger</h1>
-        <p>Graphic designer</p>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/events">Events</Link>
-          <Link href="/family">Family</Link>
-          <Link href="/illustrations">Illustrations</Link>
-          <Link href="/landscapes">Landscapes</Link>
-          <Link href="/pets">Pets</Link>
-          <Link href="/wildLife">Wild life</Link>
-          <Link href="/cart">Shopping cart</Link>
-          <header data-test-id="cart-link">
-            <Link data-test-id="cart-link" href="/cart">
-              Items:{' '}
-              {numberOfItems ?? (
-                <span data-test-id="cart-count">{numberOfItems}</span>
-              )}
-            </Link>
-          </header>
-        </nav>
+        <div>
+          <div>
+            <h1>Sarah Kirchweger</h1>
+            <p>Graphic designer</p>
+          </div>
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/events">Events</Link>
+            <Link href="/family">Family</Link>
+            <Link href="/illustrations">Illustrations</Link>
+            <Link href="/landscapes">Landscapes</Link>
+            <Link href="/pets">Pets</Link>
+            <Link href="/wildLife">Wild life</Link>
+            <Link href="/cart">Shopping cart</Link>
+            <header data-test-id="cart-link">
+              <Link data-test-id="cart-link" href="/cart">
+                Items:
+                {numberOfItems ?? (
+                  <span data-test-id="cart-count">{numberOfItems}</span>
+                )}
+              </Link>
+            </header>
+          </nav>
+        </div>
         {children}
       </body>
     </html>
