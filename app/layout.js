@@ -26,10 +26,10 @@ export default function RootLayout({ children }) {
       <body>
         <div className={styles.navContainer}>
           <div>
-            <Link href="/">
+            <Link className={styles.title} href="/">
               <h1>Sarah Kirchweger</h1>
             </Link>
-            <p>Graphic designer</p>
+            <p className={styles.title}>Graphic designer</p>
           </div>
           <nav className={styles.navigationLinks}>
             <Link href="/about">About</Link>

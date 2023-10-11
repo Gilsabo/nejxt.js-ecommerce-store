@@ -4,9 +4,34 @@
   align-items: center;
 }
 
+.containterTitle {
+  text-align: center;
+}
+
+.title {
+  text-decoration: none;
+  color: antiquewhite;
+}
 .navigationLinks {
   display: flex;
   margin-left: 0.4rem;
   justify-content: space-around;
   width: 50rem;
+}
+
+.navigationLinks > a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+.navigationLinks > a:hover {
+  color: white;
+}
+
+.navigationLinks > header > a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.navigationLinks > header > a:hover {
+  color: white;
 }
