@@ -13,7 +13,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <h1 className={styles.title}>home</h1>
+      <h1>home</h1>
       <a href="/landscapes" data-test-id="product-1">
         <Image src={landscapeMoon} alt="landscape" width={200} height={250} />
         <div>Landscapes</div>

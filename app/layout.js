@@ -1,10 +1,7 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { getCookie } from '../util/cookies';
 import { parseJson } from '../util/json';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: {
@@ -25,7 +22,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <div>
           <div>
             <h1>Sarah Kirchweger</h1>
