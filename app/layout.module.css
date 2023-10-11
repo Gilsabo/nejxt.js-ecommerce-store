@@ -1,0 +1,12 @@
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigationLinks {
+  display: flex;
+  margin-left: 0.4rem;
+  justify-content: space-around;
+  width: 50rem;
+}
