@@ -2,6 +2,7 @@ import './globals.css';
 import Link from 'next/link';
 import { getCookie } from '../util/cookies';
 import { parseJson } from '../util/json';
+import styles from './layout.module.css';
 
 export const metadata = {
   title: {
@@ -23,13 +24,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div>
+        <div className={styles.navContainer}>
           <div>
-            <h1>Sarah Kirchweger</h1>
+            <Link href="/">
+              <h1>Sarah Kirchweger</h1>
+            </Link>
             <p>Graphic designer</p>
           </div>
-          <nav>
-            <Link href="/">Home</Link>
+          <nav className={styles.navigationLinks}>
             <Link href="/about">About</Link>
             <Link href="/events">Events</Link>
             <Link href="/family">Family</Link>
