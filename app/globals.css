@@ -8,13 +8,14 @@
   margin: 0;
 }
 
-html,
-body {
+html {
   width: 100vw;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+body {
   font-family: 'Hind', sans-serif;
+  background-color: #b29a9a;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
