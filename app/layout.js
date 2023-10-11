@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className={styles.navContainer}>
-          <div>
+          <div className={styles.containterTitle}>
             <Link className={styles.title} href="/">
               <h1>Sarah Kirchweger</h1>
             </Link>
-            <p className={styles.title}>Graphic designer</p>
+            <p className={styles.title}>Graphic designer and painter</p>
           </div>
           <nav className={styles.navigationLinks}>
             <Link href="/about">About</Link>
