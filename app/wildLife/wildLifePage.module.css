@@ -1,0 +1,36 @@
+.wildLifePaintings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  color: antiquewhite;
+  letter-spacing: 2px;
+}
+
+.picsContainer {
+  position: relative;
+  margin: 2rem;
+}
+
+.picsContainer > img {
+  border-radius: 0.4rem;
+}
+
+.titlePainting {
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  width: 100%;
+  letter-spacing: 4px;
+}
+
+.titlePainting > a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: antiquewhite;
+}
