@@ -20,7 +20,7 @@
   display: flex;
   margin-left: 0.4rem;
   justify-content: space-around;
-  width: 50rem;
+  width: 36rem;
 }
 
 .navigationLinks > a {
@@ -38,4 +38,19 @@
 
 .navigationLinks > header > a:hover {
   color: white;
+}
+
+.backpackCart > svg {
+  width: 25px;
+  height: 25px;
+}
+
+.backpackCart > span {
+  position: absolute;
+  top: 5.4%; /* Adjust the positioning of the number */
+  right: 10%; /* Adjust the positioning of the number */
+  font-size: 0.8rem;
+  color: white; /* Optional: Set text color of the number */
+  border-radius: 50%; /* Optional: Add border-radius for a circular shape */
+  padding: 5px 8px; /* Optional: Add padding for better visibility */
 }
