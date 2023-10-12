@@ -1,0 +1,27 @@
+.picsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.picsContainer > a {
+  position: relative;
+  margin: 2rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: antiquewhite;
+}
+
+.picsContainer > a > img {
+  border-radius: 0.4rem;
+}
+
+.titlePainting {
+  position: absolute;
+  bottom: 6%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  width: 100%;
+  letter-spacing: 4px;
+}

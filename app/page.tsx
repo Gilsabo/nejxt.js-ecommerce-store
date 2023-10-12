@@ -12,27 +12,26 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
-      <h1>home</h1>
+    <div className={styles.picsContainer}>
       <a href="/landscapes" data-test-id="product-1">
-        <Image src={landscapeMoon} alt="landscape" width={200} height={250} />
-        <div>Landscapes</div>
+        <Image src={landscapeMoon} alt="landscape" width={300} height={400} />
+        <div className={styles.titlePainting}>Landscapes</div>
       </a>
-      <a href="/wildLife" data-test-id="product-1">
-        <Image src={cowSeated} alt="cow" width={200} height={250} />
-        <div>Wild Life</div>
+      <a href="/wildLife" data-test-id="product-2">
+        <Image src={cowSeated} alt="cow" width={300} height={400} />
+        <div className={styles.titlePainting}>Wild Life</div>
       </a>
-      <a href="/family" data-test-id="product-1">
-        <Image src={baby3} alt="baby" width={200} height={250} />
-        <div>Family</div>
+      <a href="/family" data-test-id="product-3">
+        <Image src={baby3} alt="baby" width={300} height={400} />
+        <div className={styles.titlePainting}>Family</div>
       </a>
-      <a href="/pets" data-test-id="product-1">
-        <Image src={cat} alt="cat" width={200} height={250} />
-        <div>Pets</div>
+      <a href="/pets" data-test-id="product-4">
+        <Image src={cat} alt="cat" width={300} height={400} />
+        <div className={styles.titlePainting}>Pets</div>
       </a>
-      <a href="/events" data-test-id="product-1">
-        <Image src={wedding} alt="wedding" width={200} height={250} />
-        <div>Events</div>
+      <a href="/events" data-test-id="product-5">
+        <Image src={wedding} alt="wedding" width={300} height={400} />
+        <div className={styles.titlePainting}>Events</div>
       </a>
     </div>
   );
