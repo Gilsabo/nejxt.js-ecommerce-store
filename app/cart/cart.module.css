@@ -1,0 +1,24 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: antiquewhite;
+}
+
+.image {
+  border-radius: 0.4rem;
+}
+
+.button {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 4px 9px;
+  color: antiquewhite;
+}
+
+.checkout {
+  text-decoration: none;
+  color: #3e3636;
+}
