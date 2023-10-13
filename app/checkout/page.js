@@ -1,3 +1,4 @@
+import styles from './checkoutPage.module.css';
 import Form from './Form';
 
 export const metadata = {
@@ -6,10 +7,10 @@ export const metadata = {
 
 export default function CheckoutPage() {
   return (
-    <>
-      <div>CheckoutPage</div>
+    <div className={styles.mainContainer}>
+      <h1>CheckoutPage</h1>
       <Form />
-    </>
+    </div>
   );
 }
 
