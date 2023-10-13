@@ -5,38 +5,40 @@ export default function Form() {
   return (
     <form className={styles.form}>
       <label>
-        First name
+        <span>First name</span>
         <input data-test-id="checkout-first-name" required />
       </label>
       <label>
-        Last name
+        <span>Last name</span>
         <input data-test-id="checkout-last-name" required />
       </label>
       <label>
-        E-mail <input type="email" data-test-id="checkout-email" required />
+        <span>E-mail</span>
+        <input type="email" data-test-id="checkout-email" required />
       </label>
       <label>
-        Address <input data-test-id="checkout-address" required />
+        <span>Address</span> <input data-test-id="checkout-address" required />
       </label>
       <label>
-        City <input data-test-id="checkout-city" required />
+        <span>City</span> <input data-test-id="checkout-city" required />
       </label>
       <label>
-        Postal code
+        <span>Postal code</span>
         <input type="number" data-test-id="checkout-postal-code" required />
       </label>
       <label>
-        Country <input data-test-id="checkout-country" required />
+        <span>Country</span> <input data-test-id="checkout-country" required />
       </label>
       <label>
-        Credit card <input type="number" data-test-id="checkout-credit-card" />
+        <span>Credit card</span>
+        <input type="number" data-test-id="checkout-credit-card" />
       </label>
       <label>
-        Expiration date
+        <span>Expiration date</span>
         <input data-test-id="checkout-expiration-date" required />
       </label>
       <label>
-        Security code
+        <span>Security code</span>
         <input type="number" data-test-id="checkout-security-code" required />
       </label>
       <ClearButton />
