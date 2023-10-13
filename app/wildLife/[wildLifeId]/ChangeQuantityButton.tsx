@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { changeQuantityButtonFunction } from './actions';
+import styles from './changeQuantityButton.module.css';
 
 type Props = {
   wildLifeId: number;
@@ -15,6 +16,7 @@ export default function ChangeQuantityButton(props: Props) {
   return (
     <form>
       <button
+        className={styles.button}
         type="button"
         data-test-id="product-add-to-cart"
         onClick={() => {
@@ -25,9 +27,10 @@ export default function ChangeQuantityButton(props: Props) {
           router.refresh();
         }}
       >
-        <span>-</span>
+        <span className={styles.operator}>-</span>
       </button>
       <input
+        className={styles.input}
         data-test-id="product-quantity"
         type="number"
         value={quantity}
@@ -36,6 +39,7 @@ export default function ChangeQuantityButton(props: Props) {
         }}
       />
       <button
+        className={styles.button}
         type="button"
         data-test-id="product-add-to-cart"
         onClick={() => {
@@ -44,16 +48,18 @@ export default function ChangeQuantityButton(props: Props) {
           router.refresh();
         }}
       >
-        <span>+</span>
-      </button>
+        <span className={styles.operator}>+</span>
+      </button>{' '}
+      <br />
       <button
+        className={styles.buttonAdd}
         data-test-id="product-add-to-cart"
         formAction={
           async () =>
             await changeQuantityButtonFunction(props.wildLifeId, quantity) // props.wildLife is the id taken from
         }
       >
-        Add
+        <span className={styles.operator}>Add</span>
       </button>
     </form>
   );

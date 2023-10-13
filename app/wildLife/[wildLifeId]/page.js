@@ -55,7 +55,7 @@ export default async function WildLifeAnimal(props) {
         <div data-test-id="product-price">
           Price: {wildLifeAnimalFromObject.price} euros
         </div>
-        <div>sizes</div>
+        <div>sizesgit</div>
         <div className={styles.size}>small : {smallSize}</div>
         <div className={styles.size}>medium :{mediumSize}</div>
         <div className={styles.size}>large : {largeSize}</div>

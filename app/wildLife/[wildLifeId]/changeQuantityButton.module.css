@@ -1,0 +1,23 @@
+.input {
+  width: 60px;
+  height: 27px;
+}
+.button {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 4px 9px;
+  color: antiquewhite;
+}
+
+.operator {
+  color: #3e3636;
+}
+
+.buttonAdd {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 4px 9px;
+  color: antiquewhite;
+  width: 112px;
+  margin-top: 4px;
+}
