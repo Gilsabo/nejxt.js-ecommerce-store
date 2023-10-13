@@ -49,7 +49,7 @@ export default function ChangeQuantityButton(props: Props) {
         }}
       >
         <span className={styles.operator}>+</span>
-      </button>{' '}
+      </button>
       <br />
       <button
         className={styles.buttonAdd}
