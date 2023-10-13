@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form > label > span {
+  margin-right: 3rem;
+}
+
+.form > label {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.form > label > span > input {
+  align-self: center;
+}
