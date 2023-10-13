@@ -1,0 +1,26 @@
+.cartContainter {
+  display: flex;
+  justify-content: center;
+}
+
+.cartContainter > img {
+  border-radius: 0.4rem;
+  width: 600px;
+  height: 700px;
+}
+
+.infoPainting {
+  color: antiquewhite;
+  padding-left: 2rem;
+}
+
+.infoPainting > * {
+  margin-bottom: 1rem;
+}
+
+.size {
+  border: 1px solid antiquewhite;
+  border-radius: 12px;
+  width: 9rem;
+  padding: 0.6rem;
+}
