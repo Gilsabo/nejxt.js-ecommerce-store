@@ -4,6 +4,7 @@ import { getWildLifeAnimals } from '../../database/wildLife';
 import { WildLifeAnimals } from '../../migrations/00000-createTableWildLife';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
+import styles from './cart.module.css';
 import RemoveWildLifeButton from './RemoveWildLifeButton';
 
 export const metadata = {
@@ -47,16 +48,16 @@ export default async function Cart() {
     return quantity * price;
   };
   return (
-    <>
-      <div>Cart</div>
+    <div className={styles.mainContainer}>
       {wildLifeWithQuantities.map((wildLifeWithQuantity) => {
         return (
           <div
             key={`div-${wildLifeWithQuantity}`}
             data-test-id={`cart-product-${wildLifeWithQuantity}`}
           >
-            <div>{wildLifeWithQuantity.name}</div>
+            <h1>{wildLifeWithQuantity.name}</h1>
             <Image
+              className={styles.image}
               src={`/images/${wildLifeWithQuantity.name}.jpg`}
               alt={wildLifeWithQuantity.name}
               width={350}
@@ -79,8 +80,10 @@ export default async function Cart() {
             <RemoveWildLifeButton
               wildLifeWithQuantityId={wildLifeWithQuantity.id}
             />
-            <button data-test-id="cart-checkout">
-              <Link href="/checkout"> Check out button</Link>
+            <button className={styles.button} data-test-id="cart-checkout">
+              <Link className={styles.checkout} href="/checkout">
+                Check out button
+              </Link>
             </button>
           </div>
         );
@@ -90,6 +93,6 @@ export default async function Cart() {
       ) : (
         <div>No painting in the shopping cart</div>
       )}
-    </>
+    </div>
   );
 }
