@@ -13,7 +13,7 @@ export default function ThankYouPage() {
       <div className={styles.heart}>💸</div>
       <div>
         <h1>Gracias por todo Jose, good energy!</h1>
-        <div className={styles.heart}>👍👍👍👍👍</div>
+        <div className={styles.heart}>👍</div>
       </div>
     </div>
   );
