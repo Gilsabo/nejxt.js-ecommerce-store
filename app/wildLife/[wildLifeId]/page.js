@@ -4,6 +4,7 @@ import { getWildLifeAnimal } from '../../../database/wildLife';
 // import { getCookie } from '../../../util/cookies';
 // import { parseJson } from '../../../util/json';
 import ChangeQuantityButton from './ChangeQuantityButton';
+import styles from './wildLIfePageDynamic.module.css';
 
 export function generateMetadata({ params }) {
   const singleAnimal = getWildLifeAnimal(Number(params.wildLifeId));
@@ -40,26 +41,25 @@ export default async function WildLifeAnimal(props) {
   console.log('wildlife', wildLifeAnimalFromObject);
   console.log('size', wildLifeAnimalFromObject.size[0]);
   return (
-    <div>
-      <div>
+    <div className={styles.cartContainter}>
+      <Image
+        data-test-id="product-image"
+        src={`/images/${wildLifeAnimalFromObject.name}.jpg`}
+        width={400}
+        height={500}
+        alt={wildLifeAnimalFromObject.name}
+      />
+
+      <div className={styles.infoPainting}>
         <h1>{wildLifeAnimalFromObject.name}</h1>
-        <Image
-          data-test-id="product-image"
-          src={`/images/${wildLifeAnimalFromObject.name}.jpg`}
-          width={400}
-          height={500}
-          alt={wildLifeAnimalFromObject.name}
-        />
-      </div>
-      <ChangeQuantityButton wildLifeId={wildLifeAnimalFromObject.id} />
-      <div>
-        <div>{wildLifeAnimalFromObject.name}</div>
         <div data-test-id="product-price">
-          {wildLifeAnimalFromObject.price} euros
+          Price: {wildLifeAnimalFromObject.price} euros
         </div>
-        <div>small size : {smallSize}</div>
-        <div>medium size :{mediumSize}</div>
-        <div>large size : {largeSize}</div>
+        <div>sizes</div>
+        <div className={styles.size}>small : {smallSize}</div>
+        <div className={styles.size}>medium :{mediumSize}</div>
+        <div className={styles.size}>large : {largeSize}</div>
+        <ChangeQuantityButton wildLifeId={wildLifeAnimalFromObject.id} />
       </div>
     </div>
   );
