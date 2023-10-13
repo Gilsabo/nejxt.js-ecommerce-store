@@ -46,12 +46,15 @@
   height: 25px;
 }
 
+.backpackCart {
+  position: relative;
+}
+
 .backpackCart > span {
   position: absolute;
-  top: 5.4%; /* Adjust the positioning of the number */
-  right: 10%; /* Adjust the positioning of the number */
+  top: 13.4%;
+  right: 28%;
   font-size: 0.8rem;
-  color: white; /* Optional: Set text color of the number */
-  border-radius: 50%; /* Optional: Add border-radius for a circular shape */
-  padding: 5px 8px; /* Optional: Add padding for better visibility */
+  color: white;
+  border-radius: 50%;
 }
