@@ -25,7 +25,7 @@ export default function ChangeQuantityButton(props: Props) {
           router.refresh();
         }}
       >
-        -
+        <span>-</span>
       </button>
       <input
         data-test-id="product-quantity"
@@ -44,7 +44,7 @@ export default function ChangeQuantityButton(props: Props) {
           router.refresh();
         }}
       >
-        +
+        <span>+</span>
       </button>
       <button
         data-test-id="product-add-to-cart"
