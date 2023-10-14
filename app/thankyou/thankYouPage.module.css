@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   color: antiquewhite;
-  flex-direction: column;
 }
 
 @keyframes love {
