@@ -10,7 +10,7 @@ export function generateMetadata({ params }) {
   const singleAnimal = getWildLifeAnimal(Number(params.wildLifeId));
   console.log(singleAnimal);
   return {
-    title: singleAnimal ? singleAnimal.name : '',
+    title: singleAnimal.name,
   };
 }
 
