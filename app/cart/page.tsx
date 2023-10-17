@@ -91,7 +91,7 @@ export default async function Cart() {
       {totalPrice ? (
         <div data-test-id="cart-total">Total price :{totalPrice}</div>
       ) : (
-        <div>No painting in the shopping cart</div>
+        <h1>No painting in the shopping cart</h1>
       )}
     </div>
   );
