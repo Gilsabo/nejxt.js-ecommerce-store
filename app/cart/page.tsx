@@ -80,11 +80,11 @@ export default async function Cart() {
             <RemoveWildLifeButton
               wildLifeWithQuantityId={wildLifeWithQuantity.id}
             />
-            <button className={styles.button} data-test-id="cart-checkout">
-              <Link className={styles.checkout} href="/checkout">
-                Check out button
-              </Link>
-            </button>
+            {/* <button className={styles.button} data-test-id="cart-checkout"> */}
+            <Link className={styles.checkout} href="/checkout">
+              Check out button
+            </Link>
+            {/* </button> */}
           </div>
         );
       })}
