@@ -7,10 +7,10 @@ export const metadata = {
 
 export default function CheckoutPage() {
   return (
-    <div className={styles.mainContainer}>
+    <main className={styles.mainContainer}>
       <h1>CheckoutPage</h1>
       <Form />
-    </div>
+    </main>
   );
 }
 
