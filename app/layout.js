@@ -9,7 +9,7 @@ export const metadata = {
     default: 'SKartista | Sarah Kirchweger ',
     template: '%s | Sarah Kirchweger ',
   },
-  description: 'Graphic designer and painter',
+  description: 'Graphic designer and artist',
 };
 
 export default function RootLayout({ children }) {
