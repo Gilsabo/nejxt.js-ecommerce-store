@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className={styles.navContainer}>
+        <main className={styles.navContainer}>
           <div className={styles.containterTitle}>
             <Link className={styles.title} href="/">
               <h1>Sarah Kirchweger</h1>
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
               </Link>
             </header>
           </nav>
-        </div>
+        </main>
         {children}
       </body>
     </html>
