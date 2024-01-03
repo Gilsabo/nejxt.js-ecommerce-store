@@ -1,9 +1,20 @@
-import ClearButton from './ClearButton';
+'use client';
+
+import { useRouter } from 'next/navigation';
+import clearCart from './actions';
 import styles from './form.module.css';
 
 export default function Form() {
+  const router = useRouter();
   return (
-    <form className={styles.form}>
+    <form
+      className={styles.form}
+      onSubmit={(event) => {
+        clearCart();
+        router.push('/thankyou');
+        event.preventDefault();
+      }}
+    >
       <label>
         <span>First name</span>
         <input data-test-id="checkout-first-name" required />
@@ -41,7 +52,10 @@ export default function Form() {
         <span>Security code</span>
         <input type="number" data-test-id="checkout-security-code" required />
       </label>
-      <ClearButton />
+
+      <button type="submit" data-test-id="checkout-confirm-order">
+        Confirm order
+      </button>
     </form>
   );
 }
