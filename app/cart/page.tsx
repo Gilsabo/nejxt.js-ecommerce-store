@@ -60,13 +60,14 @@ export default async function Cart() {
               width={350}
               height={400}
             />
+            <div>Price {wildLifeWithQuantity.price}</div>
             <div
               className="quanityt"
               data-test-id={`cart-product-quantity-${wildLifeWithQuantity.id}`}
             >
               Quantity: {wildLifeWithQuantity.quantity}
             </div>
-            <div>{wildLifeWithQuantity.price}</div>
+
             <div className="subtotal">
               subtotal:
               {subTotal(
