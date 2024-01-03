@@ -9,7 +9,6 @@ export const metadata = {
 
 export default async function WildLife() {
   const wildLifeAnimals = await getWildLifeAnimals();
-  console.log('data', wildLifeAnimals[0].size[0].small);
   return (
     <>
       <h1 className={styles.header}>Wild life</h1>

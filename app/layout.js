@@ -15,7 +15,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const cartCookie = getCookie('cart');
   const cart = parseJson(cartCookie);
-  console.log('cartcookie layout', cart);
 
   const numberOfItems = cart?.reduce((accumulator, preValue) => {
     return accumulator + preValue.quantity;

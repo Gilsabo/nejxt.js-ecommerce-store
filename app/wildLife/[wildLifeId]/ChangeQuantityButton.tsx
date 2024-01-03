@@ -11,7 +11,6 @@ type Props = {
 export default function ChangeQuantityButton(props: Props) {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
-  console.log('props', props);
 
   return (
     <form>

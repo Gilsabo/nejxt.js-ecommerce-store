@@ -13,8 +13,6 @@ export default async function RemoveButtonFunction(
     quantity: number;
   };
   const wildLifeCookie = getCookie('cart');
-  console.log('id', wildLifeWithQuantityId);
-  console.log('cookie', wildLifeCookie);
 
   const wildLifeAnimalsInCart = !wildLifeCookie
     ? // Case A: cookie is undefined
@@ -27,8 +25,6 @@ export default async function RemoveButtonFunction(
     (wildLifeAnimalInCart: WildLifeAnimalsInCart) =>
       wildLifeAnimalInCart.id !== wildLifeWithQuantityId,
   );
-
-  console.log('stays', wildLifeItemsRemoved);
 
   await cookies().set('cart', JSON.stringify(wildLifeItemsRemoved));
 }

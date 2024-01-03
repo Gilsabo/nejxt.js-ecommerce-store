@@ -15,7 +15,6 @@ export default function RemoveWildLifeButton(props: Props) {
       className={styles.button}
       data-test-id={`cart-product-remove-${props.wildLifeWithQuantityId}`}
       onClick={async () => {
-        console.log('1');
         setCount(count + 1);
         await RemoveButtonFunction(props.wildLifeWithQuantityId);
       }}

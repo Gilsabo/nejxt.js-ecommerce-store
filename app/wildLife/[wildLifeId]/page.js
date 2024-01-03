@@ -6,7 +6,7 @@ import styles from './wildLIfePageDynamic.module.css';
 
 export function generateMetadata({ params }) {
   const singleAnimal = getWildLifeAnimal(Number(params.wildLifeId));
-  console.log(singleAnimal);
+
   return {
     title: singleAnimal.name,
   };
@@ -27,8 +27,6 @@ export default async function WildLifeAnimal(props) {
   const mediumSize = firstSizeObject.medium;
   const largeSize = firstSizeObject.large;
 
-  console.log('wildlife', wildLifeAnimalFromObject);
-  console.log('size', wildLifeAnimalFromObject.size[0]);
   return (
     <div className={styles.cartContainter}>
       <Image

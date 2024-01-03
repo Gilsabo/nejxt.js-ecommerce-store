@@ -13,13 +13,10 @@ export const metadata = {
 
 export default async function Cart() {
   const wildLifeCookie = getCookie('cart');
-  console.log('wildlifecookie', wildLifeCookie);
+
   const wildLifeAnimals = await getWildLifeAnimals();
 
   const wildLifeQuantities = !wildLifeCookie ? [] : parseJson(wildLifeCookie);
-  console.log(wildLifeQuantities);
-
-  console.log('wildLifequantitieees', wildLifeQuantities);
 
   const wildLifeWithQuantities = wildLifeAnimals
 
