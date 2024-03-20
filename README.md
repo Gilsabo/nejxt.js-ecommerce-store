@@ -12,7 +12,7 @@ pnpm run dev
 
 <img src="./public/images/landingpage.png" width="70%">
 
-### Landing page
+### Wild life section
 
 <img src="./public/images/wildlifepage.png" width="70%">
 
