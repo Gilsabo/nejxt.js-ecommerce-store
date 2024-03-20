@@ -18,5 +18,5 @@ pnpm run dev
 
 ### Checkout page
 
-<img src="./public/checkoutpage.png" width="70%">
+<img src="./public/images/checkoutpage.png" width="70%">
 
