@@ -5,18 +5,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npmp run dev
+pnpm run dev
 ```
 
 ### Landing page
 
-<img src="./public/landingpage.png" width="70%">
+<img src="./public/images/landingpage.png" width="70%">
 
-### Landing page
+### Wild life section
 
-<img src="./public/wildlifepage.png" width="70%">
+<img src="./public/images/wildlifepage.png" width="70%">
 
 ### Checkout page
 
-<img src="./public/checkoutpage.png" width="70%">
+<img src="./public/images/checkoutpage.png" width="70%">
 
